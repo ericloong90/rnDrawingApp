@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import styled from 'styled-components';
 import * as StyledCommonComponents from '../../styledComponents/common'
+import { RNCamera } from "react-native-camera";
 
 class screen2 extends Component {
   render() {
@@ -11,7 +12,9 @@ class screen2 extends Component {
         <Text onPress={() => {
           this.props.router.stack[0].pop()
         }}>Click to go back to main screen</Text>
-        <StyledCommonComponents.StyledCanvas />
+        <StyledCommonComponents.StyledCanvas 
+          canvasAction='camera'
+        />
       </MainContainer>
     )
   }

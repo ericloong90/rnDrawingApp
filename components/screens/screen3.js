@@ -11,7 +11,9 @@ class screen3 extends Component {
         <Text onPress={() => {
           this.props.router.stack[0].pop()
         }}>Click to go back to main screen</Text>
-        <StyledCommonComponents.StyledCanvas />
+        <StyledCommonComponents.StyledCanvas 
+          canvasAction='gallery'
+        />
       </MainContainer>
     )
   }

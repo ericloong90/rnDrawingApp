@@ -10,6 +10,7 @@
     "@terrylinla/react-native-sketch-canvas": "^0.8.0",
     "react": "16.4.1",
     "react-native": "0.56.0",
+    "react-native-camera": "^1.2.0",
     "react-native-easy-router": "^2.5.0",
     "styled-components": "^3.4.5"
   },

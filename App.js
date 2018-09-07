@@ -23,6 +23,8 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+console.disableYellowBox = true
+
 class MainScreen extends Component {
   render() {
     return (
