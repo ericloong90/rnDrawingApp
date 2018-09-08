@@ -11,9 +11,7 @@ import {Platform, StyleSheet, Text, View, AppRegistry} from 'react-native';
 import Router from "react-native-easy-router";
 import screen1 from './components/screens/screen1'
 import screen2 from './components/screens/screen2'
-import screen3 from './components/screens/screen3'
 import styled from 'styled-components'
-import { SketchCanvas } from "@terrylinla/react-native-sketch-canvas";
 import * as StyledCommonComponents from './styledComponents/common'
 
 const instructions = Platform.select({
@@ -35,9 +33,6 @@ class MainScreen extends Component {
         <Text onPress={() => {
           this.props.router.push.screen2()
         }}>Click here to go to screen 2</Text>
-        <Text onPress={() => {
-          this.props.router.push.screen3()
-        }}>Click here to go to screen 3</Text>
       </StyledMainScreenView>
     );
   }
@@ -54,7 +49,7 @@ const StyledMainScreenView = styled(View)`
 `
 
 
-const routes = { StyledMainScreen, screen1, screen2, screen3 }
+const routes = { StyledMainScreen, screen1, screen2 }
 
 const App = () => <Router routes={routes} initialRoute='StyledMainScreen' />
 

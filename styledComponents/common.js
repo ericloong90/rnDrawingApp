@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Text, View, TouchableOpacity, Dimensions, Image } from 'react-native';
+import { Text, View, TouchableOpacity, Dimensions, Image, Alert } from 'react-native';
 import { SketchCanvas, RNSketchCanvas } from '@terrylinla/react-native-sketch-canvas';
 import { RNCamera } from "react-native-camera";
 
@@ -111,7 +111,9 @@ class StyledCanvas extends Component {
                 strokeColor={this.state.brushColor}
                 strokeWidth={7}
                 ref={ref => this.canvas = ref}
-                onSketchSaved={(success, path) => console.log(path)}
+                onSketchSaved={(success, path) => {
+                  Alert.alert(success ? 'Image saved!' : 'Failed to save image!', path)
+                }}
               />
               <StyledButtonContainer>
                 <StyledButtonBottom
@@ -142,7 +144,7 @@ class StyledCanvas extends Component {
 
         {
           this.props.canvasAction === 'camera' &&
-          this.state.photoPath === null ?
+          (this.state.photoPath === null ?
             <StyledCameraContainer>
               <RNCamera
                 style={{ 
@@ -222,15 +224,10 @@ class StyledCanvas extends Component {
                   mode: 'AspectFit'
                 }}
                 ref={ref => this.canvas = ref}
-                onSketchSaved={(success, path) => console.log(path)}
-              />
-              {/* <Image 
-                style={{
-                  width: 100,
-                  height: 100,
+                onSketchSaved={(success, path) => {
+                  Alert.alert(success ? 'Image saved!' : 'Failed to save image!', path)
                 }}
-                source={{uri: 'file:///data/user/0/com.rndrawingapp/cache/Camera/09e45abc-c42f-44fa-9c2e-ab007fec70c5.jpg'}}
-              /> */}
+              />
               <StyledButtonContainer>
                 <StyledButtonBottom
                   onPress={() => {
@@ -256,11 +253,7 @@ class StyledCanvas extends Component {
                 </StyledButtonBottom>
               </StyledButtonContainer>
             </StyledCanvasContainer>
-        }
-
-        {
-          this.props.canvasAction === 'gallery' &&
-          <View></View>
+          )
         }
 
       </View>
