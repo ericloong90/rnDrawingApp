@@ -235,7 +235,7 @@ class StyledCanvas extends Component {
                 <StyledButtonBottom
                   onPress={() => {
                     console.log(this.canvas)
-                    this.canvas.root.save('jpg', false, 'SketchCanvas', String(Math.ceil(Math.random() * 10000000000)), false, false, false)
+                    this.canvas.root.save('jpg', false, 'SketchCanvas', String(Math.ceil(Math.random() * 10000000000)), true, true, true)
                   }}           
                 >
                   <Text>Save</Text>
