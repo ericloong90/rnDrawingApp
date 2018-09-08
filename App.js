@@ -48,7 +48,7 @@ const StyledMainScreen = styled(MainScreen)`
 
 const StyledMainScreenView = styled(View)`
   flex: 1;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #F5FCFF;
 `

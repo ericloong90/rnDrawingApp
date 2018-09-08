@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import styled from 'styled-components';
 import * as StyledCommonComponents from '../../styledComponents/common'
-import { RNCamera } from "react-native-camera";
 
 class screen2 extends Component {
+
   render() {
     return (
       <MainContainer>
