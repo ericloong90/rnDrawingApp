@@ -13,6 +13,7 @@ import screen1 from './components/screens/screen1'
 import screen2 from './components/screens/screen2'
 import styled from 'styled-components'
 import * as StyledCommonComponents from './styledComponents/common'
+import { Container, Header, Left, Body, Right, Button, Icon, Title } from "native-base";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -26,14 +27,21 @@ console.disableYellowBox = true
 class MainScreen extends Component {
   render() {
     return (
-      <StyledMainScreenView>
+      <Container>
+        <Header>
+          <Left />
+          <Body>
+            <Title>Main Screen</Title>
+          </Body>
+          <Right />
+        </Header>
         <Text onPress={() => {
           this.props.router.push.screen1()
-        }}>Click here to go to screen 1</Text>
+        }}>Click here to draw on a plain canvas</Text>
         <Text onPress={() => {
           this.props.router.push.screen2()
-        }}>Click here to go to screen 2</Text>
-      </StyledMainScreenView>
+        }}>Click here to snap a picture to draw on</Text>
+      </Container>
     );
   }
 }

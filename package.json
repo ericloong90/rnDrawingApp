@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@terrylinla/react-native-sketch-canvas": "^0.8.0",
+    "native-base": "^2.8.0",
     "react": "16.4.1",
     "react-native": "0.56.0",
     "react-native-camera": "^1.2.0",
