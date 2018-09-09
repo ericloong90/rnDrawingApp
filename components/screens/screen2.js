@@ -2,30 +2,35 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import styled from 'styled-components';
 import * as StyledCommonComponents from '../../styledComponents/common'
+import { Container, Header, Left, Body, Right, Button, Icon, Title } from "native-base";
 
 class screen2 extends Component {
 
   render() {
     return (
-      <MainContainer>
-        <Text>This is screen 2</Text>
-        <Text onPress={() => {
-          this.props.router.stack[0].pop()
-        }}>Click to go back to main screen</Text>
+      <Container>
+        <Header>
+          <Left>
+            <Button 
+              transparent
+              onPress={() => {
+                this.props.router.stack[0].pop()
+              }}>
+              <Icon name='arrow-back' />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Picture</Title>
+          </Body>
+          <Right />
+        </Header>
         <StyledCommonComponents.StyledCanvas 
           canvasAction='camera'
         />
-      </MainContainer>
+      </Container>
     )
   }
 }
-
-MainContainer = styled(View)`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-`
 
 export default styled(screen2)`
 

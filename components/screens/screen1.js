@@ -20,7 +20,7 @@ class screen1 extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Screen 1</Title>
+            <Title>Plain Canvas</Title>
           </Body>
           <Right />
         </Header>
@@ -31,13 +31,6 @@ class screen1 extends Component {
     )
   }
 }
-
-// MainContainer = styled(View)`
-//   flex: 1;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: #fff;
-// `
 
 export default styled(screen1)`
 

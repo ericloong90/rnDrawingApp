@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Text, View, TouchableOpacity, Dimensions, Image, Alert } from 'react-native';
-import { SketchCanvas, RNSketchCanvas } from '@terrylinla/react-native-sketch-canvas';
+import { View, TouchableOpacity, Alert } from 'react-native';
+import { SketchCanvas } from '@terrylinla/react-native-sketch-canvas';
 import { RNCamera } from "react-native-camera";
+import { Toast, Text } from 'native-base'
 
 const StyledCanvasContainer = styled(View)`
   flex: 1;
@@ -61,9 +62,6 @@ class StyledCanvas extends Component {
       this.setState({
         photoPath: data.uri.replace('file://', '')
       })
-      // this.setState({
-      //   photoPath: data.uri
-      // })
       console.log(data)
     }
   }
@@ -171,7 +169,7 @@ class StyledCanvas extends Component {
                   style={{
                     flex: 0,
                     backgroundColor: '#fff',
-                    borderRadius: 5,
+                    borderRadius: 100,
                     padding: 15,
                     paddingHorizontal: 20,
                     alignSelf: 'center',
