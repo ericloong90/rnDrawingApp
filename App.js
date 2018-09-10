@@ -85,13 +85,6 @@ class MainScreen extends Component {
 
 const StyledMainScreen = styled(MainScreen)``;
 
-const StyledMainScreenView = styled(View)`
-  flex: 1;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #f5fcff;
-`;
-
 const routes = { StyledMainScreen, screen1, screen2 };
 
 const App = () => <Router routes={routes} initialRoute="StyledMainScreen" />;
